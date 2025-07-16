@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SearchTableViewCell : UITableViewCell<UIScrollViewDelegate>
 @property (nonatomic, strong)UIScrollView* scrollView;
 @property (nonatomic, strong)UIScrollView* scrollView02;
+@property (nonatomic, strong)UIScrollView* scrollView03;
 @property (nonatomic, strong)UIPageControl* pageControl;
 @property (nonatomic, strong, nullable)NSTimer* timer;
 - (void)replaceTimer:(NSString* )reuseIdentifier;

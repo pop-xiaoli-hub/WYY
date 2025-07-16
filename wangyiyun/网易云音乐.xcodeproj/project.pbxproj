@@ -7,8 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D09EE552E27361C006503AF /* Vip6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE542E27361C006503AF /* Vip6.png */; };
+		0D09EE592E273852006503AF /* vip2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE582E273852006503AF /* vip2.png */; };
+		0D09EE7C2E2779C3006503AF /* b3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE7A2E2779C3006503AF /* b3.png */; };
+		0D09EE7D2E2779C3006503AF /* b2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE792E2779C3006503AF /* b2.png */; };
+		0D09EE7E2E2779C3006503AF /* b4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE7B2E2779C3006503AF /* b4.png */; };
+		0D09EE7F2E2779C3006503AF /* b1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE782E2779C3006503AF /* b1.png */; };
+		0D09EE842E2788D8006503AF /* c3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE822E2788D8006503AF /* c3.png */; };
+		0D09EE852E2788D8006503AF /* c2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE812E2788D8006503AF /* c2.png */; };
+		0D09EE862E2788D8006503AF /* c1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE802E2788D8006503AF /* c1.png */; };
+		0D09EE872E2788D8006503AF /* c4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE832E2788D8006503AF /* c4.png */; };
+		0D09EE8B2E278B8E006503AF /* m3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE8A2E278B8E006503AF /* m3.png */; };
+		0D09EE8E2E278D1F006503AF /* m2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE8D2E278D1F006503AF /* m2.png */; };
+		0D09EE8F2E278D1F006503AF /* m1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE8C2E278D1F006503AF /* m1.png */; };
+		0D09EEC72E27C138006503AF /* night.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EEC62E27C138006503AF /* night.png */; };
 		0D336E932DFA9502006BF4ED /* leftButtonOfsearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D336E912DFA9502006BF4ED /* leftButtonOfsearch.png */; };
 		0D336E952DFA96D2006BF4ED /* rightButtonOfsearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D336E942DFA96D2006BF4ED /* rightButtonOfsearch.png */; };
+		0D39D43F2E265DFB00905F7D /* a4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D39D43D2E265DFB00905F7D /* a4.jpg */; };
+		0D39D4402E265DFB00905F7D /* a1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D39D43A2E265DFB00905F7D /* a1.jpg */; };
+		0D39D4412E265DFB00905F7D /* a2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D39D43B2E265DFB00905F7D /* a2.jpg */; };
+		0D39D4422E265DFB00905F7D /* a3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D39D43C2E265DFB00905F7D /* a3.jpg */; };
+		0D39D4432E265DFB00905F7D /* a5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D39D43E2E265DFB00905F7D /* a5.jpg */; };
+		0D39D4A52E267E8C00905F7D /* a1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D39D4A32E267E8C00905F7D /* a1.png */; };
+		0D39D4A62E267E8C00905F7D /* a2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D39D4A42E267E8C00905F7D /* a2.png */; };
+		0D39D4A82E26804900905F7D /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D39D4A72E26804900905F7D /* pic2.jpg */; };
 		0D95659D2DFAF5C300E3962E /* p4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D9565972DFAF5C300E3962E /* p4.jpg */; };
 		0D95659E2DFAF5C300E3962E /* p8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D95659B2DFAF5C300E3962E /* p8.jpg */; };
 		0D95659F2DFAF5C300E3962E /* p6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D9565992DFAF5C300E3962E /* p6.jpg */; };
@@ -28,8 +50,6 @@
 		0D9569822E0042CE00E3962E /* search8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D95697B2E0042CE00E3962E /* search8.png */; };
 		0D9569832E0042CE00E3962E /* search10.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D95697D2E0042CE00E3962E /* search10.png */; };
 		0D956B042E029B1F00E3962E /* pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D956B022E029B1F00E3962E /* pic.jpg */; };
-		0D956B0F2E029D2400E3962E /* a1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D956B0E2E029D2400E3962E /* a1.png */; };
-		0D956B112E029FE100E3962E /* a2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D956B102E029FE100E3962E /* a2.png */; };
 		0D956B172E02A43400E3962E /* StartView.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D956B162E02A43400E3962E /* StartView.jpg */; };
 		0D9571D22E24B1E000E3962E /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D9571D12E24B1E000E3962E /* back.jpg */; };
 		0D9572A52E24EA2100E3962E /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D9572A12E24EA2100E3962E /* 1.jpg */; };
@@ -39,6 +59,7 @@
 		0D9572AB2E24EB2200E3962E /* aixin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D9572A82E24EB2200E3962E /* aixin1.png */; };
 		0D9573DA2E25302400E3962E /* caidan.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D9573D82E25302400E3962E /* caidan.png */; };
 		0D9573DD2E25306A00E3962E /* tinggeshiqu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D9573DC2E25306A00E3962E /* tinggeshiqu.png */; };
+		5550E81EE539878CC9186857 /* libPods-网易云音乐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6D45C9CD3EE431EB673F44 /* libPods-网易云音乐.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +80,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D09EE542E27361C006503AF /* Vip6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vip6.png; sourceTree = "<group>"; };
+		0D09EE582E273852006503AF /* vip2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vip2.png; sourceTree = "<group>"; };
+		0D09EE782E2779C3006503AF /* b1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b1.png; sourceTree = "<group>"; };
+		0D09EE792E2779C3006503AF /* b2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b2.png; sourceTree = "<group>"; };
+		0D09EE7A2E2779C3006503AF /* b3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b3.png; sourceTree = "<group>"; };
+		0D09EE7B2E2779C3006503AF /* b4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b4.png; sourceTree = "<group>"; };
+		0D09EE802E2788D8006503AF /* c1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c1.png; sourceTree = "<group>"; };
+		0D09EE812E2788D8006503AF /* c2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c2.png; sourceTree = "<group>"; };
+		0D09EE822E2788D8006503AF /* c3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c3.png; sourceTree = "<group>"; };
+		0D09EE832E2788D8006503AF /* c4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c4.png; sourceTree = "<group>"; };
+		0D09EE8A2E278B8E006503AF /* m3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m3.png; sourceTree = "<group>"; };
+		0D09EE8C2E278D1F006503AF /* m1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m1.png; sourceTree = "<group>"; };
+		0D09EE8D2E278D1F006503AF /* m2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m2.png; sourceTree = "<group>"; };
+		0D09EEC62E27C138006503AF /* night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = night.png; sourceTree = "<group>"; };
 		0D336D922DFA8A7F006BF4ED /* 网易云音乐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易云音乐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D336DAD2DFA8A82006BF4ED /* 网易云音乐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网易云音乐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D336DB72DFA8A82006BF4ED /* 网易云音乐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网易云音乐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D336E912DFA9502006BF4ED /* leftButtonOfsearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftButtonOfsearch.png; sourceTree = "<group>"; };
 		0D336E942DFA96D2006BF4ED /* rightButtonOfsearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightButtonOfsearch.png; sourceTree = "<group>"; };
+		0D39D43A2E265DFB00905F7D /* a1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a1.jpg; sourceTree = "<group>"; };
+		0D39D43B2E265DFB00905F7D /* a2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a2.jpg; sourceTree = "<group>"; };
+		0D39D43C2E265DFB00905F7D /* a3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a3.jpg; sourceTree = "<group>"; };
+		0D39D43D2E265DFB00905F7D /* a4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a4.jpg; sourceTree = "<group>"; };
+		0D39D43E2E265DFB00905F7D /* a5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a5.jpg; sourceTree = "<group>"; };
+		0D39D4A32E267E8C00905F7D /* a1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a1.png; sourceTree = "<group>"; };
+		0D39D4A42E267E8C00905F7D /* a2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a2.png; sourceTree = "<group>"; };
+		0D39D4A72E26804900905F7D /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
 		0D9565942DFAF5C300E3962E /* p1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p1.jpg; sourceTree = "<group>"; };
 		0D9565952DFAF5C300E3962E /* p2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p2.jpg; sourceTree = "<group>"; };
 		0D9565962DFAF5C300E3962E /* p3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p3.jpg; sourceTree = "<group>"; };
@@ -83,8 +126,6 @@
 		0D95697C2E0042CE00E3962E /* search9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search9.png; sourceTree = "<group>"; };
 		0D95697D2E0042CE00E3962E /* search10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search10.png; sourceTree = "<group>"; };
 		0D956B022E029B1F00E3962E /* pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic.jpg; sourceTree = "<group>"; };
-		0D956B0E2E029D2400E3962E /* a1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a1.png; sourceTree = "<group>"; };
-		0D956B102E029FE100E3962E /* a2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a2.png; sourceTree = "<group>"; };
 		0D956B162E02A43400E3962E /* StartView.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = StartView.jpg; sourceTree = "<group>"; };
 		0D9571D12E24B1E000E3962E /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
 		0D9572A12E24EA2100E3962E /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
@@ -95,6 +136,9 @@
 		0D9573D82E25302400E3962E /* caidan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caidan.png; sourceTree = "<group>"; };
 		0D9573DC2E25306A00E3962E /* tinggeshiqu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tinggeshiqu.png; sourceTree = "<group>"; };
 		0D9573FC2E25E4F900E3962E /* 网易云音乐.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "网易云音乐.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		0E6D45C9CD3EE431EB673F44 /* libPods-网易云音乐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网易云音乐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F94CAF4DA992D907BB21E72C /* Pods-网易云音乐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易云音乐.release.xcconfig"; path = "Target Support Files/Pods-网易云音乐/Pods-网易云音乐.release.xcconfig"; sourceTree = "<group>"; };
+		FE59F2EC98E082B96B3B6BD7 /* Pods-网易云音乐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易云音乐.debug.xcconfig"; path = "Target Support Files/Pods-网易云音乐/Pods-网易云音乐.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -133,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5550E81EE539878CC9186857 /* libPods-网易云音乐.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +210,8 @@
 				0D336DB02DFA8A82006BF4ED /* 网易云音乐Tests */,
 				0D336DBA2DFA8A82006BF4ED /* 网易云音乐UITests */,
 				0D336D932DFA8A7F006BF4ED /* Products */,
+				F2F782A3CD45BC6F98017E2B /* Pods */,
+				725D07B920BA2F21DBD604AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +228,16 @@
 		0D336E922DFA9502006BF4ED /* 网易云图标 */ = {
 			isa = PBXGroup;
 			children = (
+				0D09EE802E2788D8006503AF /* c1.png */,
+				0D09EE812E2788D8006503AF /* c2.png */,
+				0D09EE822E2788D8006503AF /* c3.png */,
+				0D09EE832E2788D8006503AF /* c4.png */,
+				0D09EE782E2779C3006503AF /* b1.png */,
+				0D09EE792E2779C3006503AF /* b2.png */,
+				0D09EE7A2E2779C3006503AF /* b3.png */,
+				0D09EE7B2E2779C3006503AF /* b4.png */,
+				0D39D4A32E267E8C00905F7D /* a1.png */,
+				0D39D4A42E267E8C00905F7D /* a2.png */,
 				0D9566A12DFBFFC600E3962E /* search1.png */,
 				0D9566A22DFBFFC600E3962E /* search2.png */,
 				0D9566A32DFBFFC600E3962E /* search3.png */,
@@ -190,11 +247,15 @@
 				0D95697A2E0042CE00E3962E /* search7.png */,
 				0D95697B2E0042CE00E3962E /* search8.png */,
 				0D95697C2E0042CE00E3962E /* search9.png */,
+				0D09EE582E273852006503AF /* vip2.png */,
 				0D95697D2E0042CE00E3962E /* search10.png */,
+				0D09EE542E27361C006503AF /* Vip6.png */,
 				0D336E912DFA9502006BF4ED /* leftButtonOfsearch.png */,
 				0D336E942DFA96D2006BF4ED /* rightButtonOfsearch.png */,
-				0D956B0E2E029D2400E3962E /* a1.png */,
-				0D956B102E029FE100E3962E /* a2.png */,
+				0D09EEC62E27C138006503AF /* night.png */,
+				0D09EE8A2E278B8E006503AF /* m3.png */,
+				0D09EE8C2E278D1F006503AF /* m1.png */,
+				0D09EE8D2E278D1F006503AF /* m2.png */,
 			);
 			path = "网易云图标";
 			sourceTree = "<group>";
@@ -202,6 +263,11 @@
 		0D95659C2DFAF5C300E3962E /* 网易云图片 */ = {
 			isa = PBXGroup;
 			children = (
+				0D39D43A2E265DFB00905F7D /* a1.jpg */,
+				0D39D43B2E265DFB00905F7D /* a2.jpg */,
+				0D39D43C2E265DFB00905F7D /* a3.jpg */,
+				0D39D43D2E265DFB00905F7D /* a4.jpg */,
+				0D39D43E2E265DFB00905F7D /* a5.jpg */,
 				0D9565942DFAF5C300E3962E /* p1.jpg */,
 				0D9565952DFAF5C300E3962E /* p2.jpg */,
 				0D9565962DFAF5C300E3962E /* p3.jpg */,
@@ -211,6 +277,7 @@
 				0D95659A2DFAF5C300E3962E /* p7.jpg */,
 				0D95659B2DFAF5C300E3962E /* p8.jpg */,
 				0D956B162E02A43400E3962E /* StartView.jpg */,
+				0D39D4A72E26804900905F7D /* pic2.jpg */,
 			);
 			path = "网易云图片";
 			sourceTree = "<group>";
@@ -238,6 +305,30 @@
 			path = photoooo;
 			sourceTree = "<group>";
 		};
+		0D95742F2E25FBB900E3962E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		725D07B920BA2F21DBD604AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E6D45C9CD3EE431EB673F44 /* libPods-网易云音乐.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2F782A3CD45BC6F98017E2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE59F2EC98E082B96B3B6BD7 /* Pods-网易云音乐.debug.xcconfig */,
+				F94CAF4DA992D907BB21E72C /* Pods-网易云音乐.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,6 +336,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D336DC02DFA8A82006BF4ED /* Build configuration list for PBXNativeTarget "网易云音乐" */;
 			buildPhases = (
+				1830CBA6C9435FEC2F91047A /* [CP] Check Pods Manifest.lock */,
 				0D336D8E2DFA8A7F006BF4ED /* Sources */,
 				0D336D8F2DFA8A7F006BF4ED /* Frameworks */,
 				0D336D902DFA8A7F006BF4ED /* Resources */,
@@ -257,8 +349,6 @@
 				0D336D942DFA8A7F006BF4ED /* 网易云音乐 */,
 			);
 			name = "网易云音乐";
-			packageProductDependencies = (
-			);
 			productName = "网易云音乐";
 			productReference = 0D336D922DFA8A7F006BF4ED /* 网易云音乐.app */;
 			productType = "com.apple.product-type.application";
@@ -280,8 +370,6 @@
 				0D336DB02DFA8A82006BF4ED /* 网易云音乐Tests */,
 			);
 			name = "网易云音乐Tests";
-			packageProductDependencies = (
-			);
 			productName = "网易云音乐Tests";
 			productReference = 0D336DAD2DFA8A82006BF4ED /* 网易云音乐Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -303,8 +391,6 @@
 				0D336DBA2DFA8A82006BF4ED /* 网易云音乐UITests */,
 			);
 			name = "网易云音乐UITests";
-			packageProductDependencies = (
-			);
 			productName = "网易云音乐UITests";
 			productReference = 0D336DB72DFA8A82006BF4ED /* 网易云音乐UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -343,6 +429,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0D336D932DFA8A7F006BF4ED /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0D95742F2E25FBB900E3962E /* Products */;
+					ProjectRef = 0D9573FC2E25E4F900E3962E /* 网易云音乐.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0D336D912DFA8A7F006BF4ED /* 网易云音乐 */,
@@ -357,23 +449,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D39D4A52E267E8C00905F7D /* a1.png in Resources */,
+				0D39D4A62E267E8C00905F7D /* a2.png in Resources */,
 				0D336E952DFA96D2006BF4ED /* rightButtonOfsearch.png in Resources */,
+				0D09EE7C2E2779C3006503AF /* b3.png in Resources */,
+				0D09EE7D2E2779C3006503AF /* b2.png in Resources */,
+				0D09EE7E2E2779C3006503AF /* b4.png in Resources */,
+				0D09EE7F2E2779C3006503AF /* b1.png in Resources */,
 				0D95659D2DFAF5C300E3962E /* p4.jpg in Resources */,
 				0D95659E2DFAF5C300E3962E /* p8.jpg in Resources */,
 				0D95659F2DFAF5C300E3962E /* p6.jpg in Resources */,
+				0D09EE552E27361C006503AF /* Vip6.png in Resources */,
+				0D39D4A82E26804900905F7D /* pic2.jpg in Resources */,
 				0D9571D22E24B1E000E3962E /* back.jpg in Resources */,
 				0D9565A02DFAF5C300E3962E /* p5.jpg in Resources */,
 				0D9565A12DFAF5C300E3962E /* p2.jpg in Resources */,
-				0D956B112E029FE100E3962E /* a2.png in Resources */,
 				0D9565A22DFAF5C300E3962E /* p1.jpg in Resources */,
 				0D9565A32DFAF5C300E3962E /* p3.jpg in Resources */,
+				0D09EE842E2788D8006503AF /* c3.png in Resources */,
+				0D09EE852E2788D8006503AF /* c2.png in Resources */,
+				0D09EE862E2788D8006503AF /* c1.png in Resources */,
+				0D09EE872E2788D8006503AF /* c4.png in Resources */,
 				0D9565A42DFAF5C300E3962E /* p7.jpg in Resources */,
 				0D336E932DFA9502006BF4ED /* leftButtonOfsearch.png in Resources */,
 				0D956B172E02A43400E3962E /* StartView.jpg in Resources */,
-				0D956B0F2E029D2400E3962E /* a1.png in Resources */,
 				0D9566A52DFBFFC600E3962E /* search4.png in Resources */,
 				0D9572AA2E24EB2200E3962E /* aixin2.png in Resources */,
 				0D9572AB2E24EB2200E3962E /* aixin1.png in Resources */,
+				0D09EE8B2E278B8E006503AF /* m3.png in Resources */,
 				0D9566A62DFBFFC600E3962E /* search1.png in Resources */,
 				0D9573DD2E25306A00E3962E /* tinggeshiqu.png in Resources */,
 				0D9572A52E24EA2100E3962E /* 1.jpg in Resources */,
@@ -382,13 +485,22 @@
 				0D9566A72DFBFFC600E3962E /* search3.png in Resources */,
 				0D95697E2E0042CE00E3962E /* search7.png in Resources */,
 				0D95697F2E0042CE00E3962E /* search9.png in Resources */,
+				0D09EE592E273852006503AF /* vip2.png in Resources */,
 				0D9569802E0042CE00E3962E /* search5.png in Resources */,
 				0D956B042E029B1F00E3962E /* pic.jpg in Resources */,
 				0D9573DA2E25302400E3962E /* caidan.png in Resources */,
 				0D9569812E0042CE00E3962E /* search6.png in Resources */,
 				0D9569822E0042CE00E3962E /* search8.png in Resources */,
+				0D39D43F2E265DFB00905F7D /* a4.jpg in Resources */,
+				0D39D4402E265DFB00905F7D /* a1.jpg in Resources */,
+				0D39D4412E265DFB00905F7D /* a2.jpg in Resources */,
+				0D39D4422E265DFB00905F7D /* a3.jpg in Resources */,
+				0D39D4432E265DFB00905F7D /* a5.jpg in Resources */,
 				0D9569832E0042CE00E3962E /* search10.png in Resources */,
 				0D9566A82DFBFFC600E3962E /* search2.png in Resources */,
+				0D09EE8E2E278D1F006503AF /* m2.png in Resources */,
+				0D09EEC72E27C138006503AF /* night.png in Resources */,
+				0D09EE8F2E278D1F006503AF /* m1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +519,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1830CBA6C9435FEC2F91047A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-网易云音乐-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0D336D8E2DFA8A7F006BF4ED /* Sources */ = {
@@ -448,6 +585,7 @@
 /* Begin XCBuildConfiguration section */
 		0D336DC12DFA8A82006BF4ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE59F2EC98E082B96B3B6BD7 /* Pods-网易云音乐.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -474,6 +612,7 @@
 		};
 		0D336DC22DFA8A82006BF4ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F94CAF4DA992D907BB21E72C /* Pods-网易云音乐.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

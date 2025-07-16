@@ -5,6 +5,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if ([self.reuseIdentifier isEqualToString:@"Cell01"]) {
+        self.backgroundColor = [UIColor clearColor];
         self.scrollView = [[UIScrollView alloc] init];
         self.scrollView.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 150);
         self.scrollView.pagingEnabled = YES;
@@ -33,6 +34,7 @@
         [self.contentView addSubview:self.scrollView];
         [self replaceTimer:@"cell01"];
     } else if ([self.reuseIdentifier isEqualToString:@"Cell02"]) {
+        self.backgroundColor = [UIColor clearColor];
         self.scrollView02 = [[UIScrollView alloc] init];
         self.scrollView02.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 70);
         self.scrollView02.pagingEnabled = NO;
@@ -69,6 +71,7 @@
         }
         [self.contentView addSubview:self.scrollView02];
     } else if ([self.reuseIdentifier isEqualToString:@"Cell03"]) {
+        self.backgroundColor = [UIColor clearColor];
         UILabel* label = [[UILabel alloc] init];
         label.frame = CGRectMake(15, 0, [[UIScreen mainScreen] bounds].size.width, 40);
         label.text = @"根据你喜爱的歌曲推荐>";
@@ -76,45 +79,134 @@
         label.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:label];
     } else if ([self.reuseIdentifier isEqualToString:@"cell04"]) {
-        UIImageView* view1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1.jpg"]];
-        UIImageView* view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"2.jpg"]];
-        UIImageView* view3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"3.jpg"]];
-        view1.userInteractionEnabled = YES;
-        view2.userInteractionEnabled = YES;
-        view3.userInteractionEnabled = YES;
-        view1.frame = CGRectMake(0, 5, [[UIScreen mainScreen] bounds].size.width, 60);
-        view2.frame = CGRectMake(0, 75, [[UIScreen mainScreen] bounds].size.width, 60);
-        view3.frame = CGRectMake(0, 145, [[UIScreen mainScreen] bounds].size.width, 60);
-        view1.clipsToBounds = YES;
-        view2.clipsToBounds = YES;
-        view3.clipsToBounds = YES;
-        view1.contentMode = UIViewContentModeScaleAspectFill;
-        view2.contentMode = UIViewContentModeScaleAspectFill;
-        view3.contentMode = UIViewContentModeScaleAspectFill;
-        UIButton* button1 = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIButton* button2 = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIButton* button3 = [UIButton buttonWithType:UIButtonTypeCustom];
-        button1.frame = CGRectMake(348, 15, 28, 28);
-        button2.frame = CGRectMake(348, 15, 28, 28);
-        button3.frame = CGRectMake(348, 15, 28, 28);
-        [button1 setImage:[UIImage imageNamed:@"aixin1.png"] forState:UIControlStateNormal];
-        [button1 addTarget:self action:@selector(pressHeart:) forControlEvents:UIControlEventTouchDown];
-        [button2 setImage:[UIImage imageNamed:@"aixin1.png"] forState:UIControlStateNormal];
-        [button2 addTarget:self action:@selector(pressHeart:) forControlEvents:UIControlEventTouchDown];
-        [button3 setImage:[UIImage imageNamed:@"aixin1.png"] forState:UIControlStateNormal];
-        [button3 addTarget:self action:@selector(pressHeart:) forControlEvents:UIControlEventTouchDown];
-       
-        [view1 addSubview:button1];
-        [view2 addSubview:button2];
-        [view3 addSubview:button3];
-        [self.contentView addSubview:view1];
-        [self.contentView addSubview:view2];
-        [self.contentView addSubview:view3];
+        self.backgroundColor = [UIColor clearColor];
+        [self createScrollView];
+    } else if ([self.reuseIdentifier isEqualToString:@"cell05"]) {
+        self.backgroundColor = [UIColor clearColor];
+        UILabel* label = [[UILabel alloc] init];
+        label.frame = CGRectMake(15, 0, [[UIScreen mainScreen] bounds].size.width, 40);
+        label.text = @"阿土的雷达歌单>";
+        label.font = [UIFont systemFontOfSize:18];
+        label.backgroundColor = [UIColor clearColor];
+        [self.contentView addSubview:label];
+    } else if ([self.reuseIdentifier isEqualToString:@"cell06"]){
+        self.backgroundColor = [UIColor clearColor];
+        self.scrollView03 = [[UIScrollView alloc] init];
+        self.scrollView03.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 130);
+        self.scrollView03.pagingEnabled = NO;
+        self.scrollView03.scrollEnabled = YES;
+        self.scrollView03.contentSize = CGSizeMake(670, 130);
+        self.scrollView03.showsHorizontalScrollIndicator = NO;
+        self.scrollView03.bounces = NO;
+        for (int i  = 1; i <= 5; i++) {
+            UIImageView* view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"a%d.jpg", i]]];
+            view.frame = CGRectMake(11 * i + (i - 1) * 120, 5, 120, 120);
+            view.contentMode = UIViewContentModeScaleAspectFill;
+            view.clipsToBounds = YES;
+            view.layer.masksToBounds = YES;
+            view.layer.cornerRadius = 15;
+            [self.scrollView03 addSubview:view];
+        }
+        [self.contentView addSubview:self.scrollView03];
+    } else if ([self.reuseIdentifier isEqualToString:@"cell07"]) {
+        self.backgroundColor = [UIColor clearColor];
+        [self createScrollView];
         
     }
     return self;
 }
 
+- (void)createScrollView {
+    self.scrollView = [[UIScrollView alloc] init];
+    self.scrollView.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 800);
+    self.scrollView.contentSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width * 3, 800);
+    self.scrollView.backgroundColor = [UIColor clearColor];
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.scrollEnabled = YES;
+    self.scrollView.bounces = NO;
+    [self.contentView addSubview:self.scrollView];
+    UIImageView* view1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"a1.jpg"]];
+    UIImageView* view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"a2.jpg"]];
+    UIImageView* view3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"a3.jpg"]];
+    view1.userInteractionEnabled = YES;
+    view2.userInteractionEnabled = YES;
+    view3.userInteractionEnabled = YES;
+    view1.frame = CGRectMake(20, 5, 60, 60);
+    view2.frame = CGRectMake(20, 75, 60, 60);
+    view3.frame = CGRectMake(20, 145, 60, 60);
+    view1.clipsToBounds = YES;
+    view2.clipsToBounds = YES;
+    view3.clipsToBounds = YES;
+    view1.contentMode = UIViewContentModeScaleAspectFill;
+    view2.contentMode = UIViewContentModeScaleAspectFill;
+    view3.contentMode = UIViewContentModeScaleAspectFill;
+    view1.layer.masksToBounds = YES;
+    view2.layer.masksToBounds = YES;
+    view3.layer.masksToBounds = YES;
+    view1.layer.cornerRadius = 10;
+    view2.layer.cornerRadius = 10;
+    view3.layer.cornerRadius = 10;
+    UIButton* button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton* button2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton* button3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button1.frame = CGRectMake(340, 25, 28, 28);
+    button2.frame = CGRectMake(340, 95, 28, 28);
+    button3.frame = CGRectMake(340, 165, 28, 28);
+    [button1 setImage:[UIImage imageNamed:@"aixin1.png"] forState:UIControlStateNormal];
+    [button1 addTarget:self action:@selector(pressHeart:) forControlEvents:UIControlEventTouchDown];
+    [button2 setImage:[UIImage imageNamed:@"aixin1.png"] forState:UIControlStateNormal];
+    [button2 addTarget:self action:@selector(pressHeart:) forControlEvents:UIControlEventTouchDown];
+    [button3 setImage:[UIImage imageNamed:@"aixin1.png"] forState:UIControlStateNormal];
+    [button3 addTarget:self action:@selector(pressHeart:) forControlEvents:UIControlEventTouchDown];
+    
+    UILabel* label1 = [[UILabel alloc] init];
+    label1.text = @"我是一只小猪";
+    label1.font = [UIFont systemFontOfSize:16];
+    label1.frame = CGRectMake(90, 15, 200, 20);
+    label1.backgroundColor = [UIColor clearColor];
+    [self.scrollView addSubview:label1];
+    UILabel* label01 = [[UILabel alloc] init];
+    label01.text = @"作者  阿土";
+    label01.font = [UIFont systemFontOfSize:13];
+    label01.frame = CGRectMake(90, 40, 200, 20);
+    label01.backgroundColor = [UIColor clearColor];
+    [self.scrollView addSubview:label01];
+    
+    
+    UILabel* label2 = [[UILabel alloc] init];
+    label2.text = @"明天我要娶了你";
+    label2.font = [UIFont systemFontOfSize:16];
+    label2.frame = CGRectMake(90, 85, 200, 20);
+    label2.backgroundColor = [UIColor clearColor];
+    [self.scrollView addSubview:label2];
+    UILabel* label02 = [[UILabel alloc] init];
+    label02.text = @"作者  郑燕子";
+    label02.font = [UIFont systemFontOfSize:13];
+    label02.frame = CGRectMake(90, 110, 200, 20);
+    label02.backgroundColor = [UIColor clearColor];
+    [self.scrollView addSubview:label02];
+    
+    
+    UILabel* label3 = [[UILabel alloc] init];
+    label3.text = @"今天你要嫁给我";
+    label3.font = [UIFont systemFontOfSize:16];
+    label3.frame = CGRectMake(90, 155, 200, 20);
+    label3.backgroundColor = [UIColor clearColor];
+    [self.scrollView addSubview:label3];
+    UILabel* label03 = [[UILabel alloc] init];
+    label03.text = @"作者  孙燕姿";
+    label03.font = [UIFont systemFontOfSize:13];
+    label03.frame = CGRectMake(90, 180, 200, 20);
+    label03.backgroundColor = [UIColor clearColor];
+    [self.scrollView addSubview:label03];
+   
+    [self.scrollView addSubview:view1];
+    [self.scrollView addSubview:view2];
+    [self.scrollView addSubview:view3];
+    [self.scrollView addSubview:button1];
+    [self.scrollView addSubview:button2];
+    [self.scrollView addSubview:button3];
+}
 
 
 - (void)pressHeart:(UIButton* )button {
@@ -133,12 +225,12 @@
     }
 }
 
-- (void)prepareForReuse {
-    [super prepareForReuse];
-    if (self.scrollView) {
-        self.scrollView.contentOffset = CGPointMake([[UIScreen mainScreen] bounds].size.width, 0);
-    }
-}
+//- (void)prepareForReuse {
+//    [super prepareForReuse];
+//    if (self.scrollView) {
+//        self.scrollView.contentOffset = CGPointMake([[UIScreen mainScreen] bounds].size.width, 0);
+//    }
+//}
 
 - (void)createPageControl {
     self.pageControl = [[UIPageControl alloc] init];

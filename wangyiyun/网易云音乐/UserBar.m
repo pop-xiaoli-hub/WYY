@@ -10,7 +10,7 @@
 @implementation UserBar
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    if (self) {
+    if  (self) {
         self.leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.leftButton setImage:[UIImage imageNamed:@"a1.png"] forState:UIControlStateNormal];
         [self addSubview:self.leftButton];
@@ -18,13 +18,14 @@
         self.rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.rightButton setImage:[UIImage imageNamed:@"a2.png"] forState:UIControlStateNormal];
         self.rightButton.frame = CGRectMake([[UIScreen mainScreen] bounds].size.width - 60, 55, 40, 40);
+        [self.rightButton addTarget:self action:@selector(pressRightbutton) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.rightButton];
     }
     return self;
 }
 
 - (void)pressRightbutton {
-    
+    NSLog(@"ppp");
 }
 
 /*

@@ -11,8 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CountTableViewCell : UITableViewCell
 @property (nonatomic, strong)UILabel* label;
-
+@property (nonatomic, strong)UISegmentedControl* segmentControl;
 @property (nonatomic, copy)NSString* count;
+@property (nonatomic, strong)UIScrollView* scrollView;
 
 @end
 

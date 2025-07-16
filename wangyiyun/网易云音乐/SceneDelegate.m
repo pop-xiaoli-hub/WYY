@@ -19,23 +19,26 @@
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     SearchView* vc1 = [[SearchView alloc] init];
+    UIImage* image1 = [[UIImage imageNamed:@"m1.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UINavigationController* nav1 = [[UINavigationController alloc] initWithRootViewController:vc1];
-    vc1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"主页" image:[UIImage systemImageNamed:@"magnifyingglass"]tag:101];
+    vc1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"主页" image:image1 tag:101];
     
     
     HomeView* vc2 = [[HomeView alloc] init];
     UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:vc2];
-    vc2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"主页" image:[UIImage systemImageNamed: @"house"] tag:102];
+    UIImage* image2 = [[UIImage imageNamed:@"m3.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"" image:image2 tag:102];
     
     CountView* vc3 = [[CountView alloc] init];
     UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:vc3];
-    vc3.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"账户" image:[UIImage systemImageNamed:@"person"] tag:103];
+    UIImage* image3 = [[UIImage imageNamed:@"m2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc3.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"账户" image:image3 tag:103];
     
     UITabBarController* tab = [[UITabBarController alloc] init];
     tab.viewControllers = @[nav1, nav2, nav3];
     self.window.rootViewController = tab;
     [self.window makeKeyAndVisible];
-    [self showStartView];
+    //[self showStartView];
 }
 
 - (void)showStartView {

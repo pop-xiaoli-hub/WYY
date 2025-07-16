@@ -10,7 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeView : UIViewController
-
+@property (nonatomic, strong) UIView* contentView;
+@property (nonatomic, strong) UIView* blurOverlay;
+@property (nonatomic, weak) UIView* parentView;
 @end
 
 NS_ASSUME_NONNULL_END

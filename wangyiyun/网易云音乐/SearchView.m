@@ -7,13 +7,18 @@
 
 #import "SearchView.h"
 #import "CustomNabBar.h"
+#import "SliderInAnimator.h"
 #import "SearchTableViewCell.h"
-@interface SearchView () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UISearchBarDelegate, UINavigationControllerDelegate>
+#import "MoreVC.h"
+#import "DrawVC.h"
+@interface SearchView () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UISearchBarDelegate, UINavigationControllerDelegate, UIViewControllerTransitioningDelegate>
+@property (nonatomic, strong)SliderInAnimator* anmitor;
 @property (nonatomic, strong)UISearchBar* searchBar;
 @property (nonatomic, strong)UITableView* tableView;
 @property (nonatomic, strong)UIBarButtonItem* leftButton;
 @property (nonatomic, strong)UIBarButtonItem* rightButton;
 @property (nonatomic, assign) CGFloat lastOffset;
+@property (nonatomic, assign)BOOL isNight;
 @end
 
 @implementation SearchView
@@ -22,6 +27,8 @@
  方法一：添加一个点击手势识别器来捕获视图上的点击事件
  UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dissmissKeyboard)];
  tap.cancelsTouchesInView = NO;
+ //手势识别不会阻止触摸事件继续传递给其他视图
+ //如果不设置或设为YES，手势识别器会"吃掉"触摸事件，导致被点击的按钮等控件无法正常响应
  [self.view addGestureRecognizer:tap];
  - (void)dissmissKeyboard {
      [self.searchBar resignFirstResponder];
@@ -61,6 +68,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.isNight = NO;
     self.view.backgroundColor = [UIColor systemGroupedBackgroundColor];
 //    CustomNabBar* bar = [[CustomNabBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 105)];
 //    [self.view addSubview:bar];
@@ -82,10 +90,10 @@
     self.navigationItem.titleView = self.searchBar;
     
     UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dissmissKeyboard)];
-    tap.cancelsTouchesInView = NO;
+    //tap.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tap];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 105, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -98,6 +106,22 @@
     [self.tableView registerClass:[SearchTableViewCell class] forCellReuseIdentifier:@"Cell02"];
     [self.tableView registerClass:[SearchTableViewCell class] forCellReuseIdentifier:@"Cell03"];
     [self.tableView registerClass:[SearchTableViewCell class] forCellReuseIdentifier:@"cell04"];
+    [self.tableView registerClass:[SearchTableViewCell class] forCellReuseIdentifier:@"cell05"];
+    [self.tableView registerClass:[SearchTableViewCell class] forCellReuseIdentifier:@"cell06"];
+    [self.tableView registerClass:[SearchTableViewCell class] forCellReuseIdentifier:@"cell07"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeBackColor:) name:@"note" object:nil];
+}
+
+- (void)changeBackColor:(NSNotification* )notification {
+    NSDictionary* dict = notification.userInfo;
+    NSNumber* num = dict[@"notice"];
+    if ([num intValue]) {
+        self.isNight = YES;
+        self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
+    } else {
+        self.isNight = NO;
+        self.view.backgroundColor = [UIColor systemGroupedBackgroundColor];
+    }
 }
 
 
@@ -114,7 +138,22 @@
 }
 
 - (void)pressLeft {
-    
+    MoreVC* vc = [[MoreVC alloc] init];
+    vc.modalPresentationStyle = UIModalPresentationCustom;
+    vc.transitioningDelegate = self;
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    self.anmitor = [[SliderInAnimator alloc] init];
+    self.anmitor.isPresenting = YES;
+    return self.anmitor;
+}
+
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    self.anmitor = [[SliderInAnimator alloc] init];
+    self.anmitor.isPresenting = NO;
+    return self.anmitor;
 }
 
 - (void)pressRight {
@@ -148,14 +187,13 @@
     CGFloat curOffset = scrollView.contentOffset.y;
     CGFloat scrollThreshold = 20.0;
     if (curOffset <= 0) {
-        [self setNavigationBarTransparent];
+        [self performSelector:@selector(setNavigationBarTransparent) withObject:nil afterDelay:0.1];
         return;
     }
     if (curOffset > self.lastOffset + scrollThreshold) {
         [self.navigationController setNavigationBarHidden:YES animated:YES];
         [self performSelector:@selector(setNavigationBarTransparent) withObject:nil afterDelay:0.1];
-    }
-    else if (curOffset < self.lastOffset - scrollThreshold) {
+    } else if (curOffset < self.lastOffset - scrollThreshold) {
         [self.navigationController setNavigationBarHidden:NO animated:YES];
         [self performSelector:@selector(setNavigationBarOpaque) withObject:nil afterDelay:0.1];
     }
@@ -193,10 +231,19 @@
     } else if (indexPath.row == 2){
         SearchTableViewCell* cell03 = [self.tableView dequeueReusableCellWithIdentifier:@"Cell03" forIndexPath:indexPath];
         return cell03;
-    } else /*if (indexPath.row == 3)*/ {
+    } else if (indexPath.row == 3){
         SearchTableViewCell* cell04 = [self.tableView dequeueReusableCellWithIdentifier:@"cell04" forIndexPath:indexPath];
         cell04.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell04;
+    } else if (indexPath.row == 4){
+        SearchTableViewCell* cell05 = [self.tableView dequeueReusableCellWithIdentifier:@"cell05" forIndexPath:indexPath];
+        return cell05;
+    } else if (indexPath.row == 5){
+        SearchTableViewCell* cell06 = [self.tableView dequeueReusableCellWithIdentifier:@"cell06" forIndexPath:indexPath];
+        return cell06;
+    } else {
+        SearchTableViewCell* cell07 = [self.tableView dequeueReusableCellWithIdentifier:@"cell07" forIndexPath:indexPath];
+        return cell07;
     }
 }
 
@@ -215,6 +262,12 @@
         height = 210;
     }
     if (indexPath.row == 4) {
+        return 40;
+    }
+    if (indexPath.row == 5) {
+        height = 130;
+    }
+    if (indexPath.row == 6) {
         height = 1000;
     }
     return height;
@@ -225,8 +278,9 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 7;
 }
+
 
 
 
@@ -241,3 +295,5 @@
 */
 
 @end
+
+
