@@ -21,6 +21,12 @@
 		0D09EE8E2E278D1F006503AF /* m2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE8D2E278D1F006503AF /* m2.png */; };
 		0D09EE8F2E278D1F006503AF /* m1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EE8C2E278D1F006503AF /* m1.png */; };
 		0D09EEC72E27C138006503AF /* night.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EEC62E27C138006503AF /* night.png */; };
+		0D09EEC92E288777006503AF /* photo01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EEC82E288777006503AF /* photo01.jpg */; };
+		0D09EECB2E28877A006503AF /* photo02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EECA2E28877A006503AF /* photo02.jpg */; };
+		0D09EECD2E28877E006503AF /* photo03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EECC2E28877E006503AF /* photo03.jpg */; };
+		0D09EECF2E288782006503AF /* photo04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EECE2E288782006503AF /* photo04.jpg */; };
+		0D09EED12E288785006503AF /* photo05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EED02E288785006503AF /* photo05.jpg */; };
+		0D09EED32E288788006503AF /* photo06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EED22E288788006503AF /* photo06.jpg */; };
 		0D336E932DFA9502006BF4ED /* leftButtonOfsearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D336E912DFA9502006BF4ED /* leftButtonOfsearch.png */; };
 		0D336E952DFA96D2006BF4ED /* rightButtonOfsearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D336E942DFA96D2006BF4ED /* rightButtonOfsearch.png */; };
 		0D39D43F2E265DFB00905F7D /* a4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D39D43D2E265DFB00905F7D /* a4.jpg */; };
@@ -94,6 +100,12 @@
 		0D09EE8C2E278D1F006503AF /* m1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m1.png; sourceTree = "<group>"; };
 		0D09EE8D2E278D1F006503AF /* m2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = m2.png; sourceTree = "<group>"; };
 		0D09EEC62E27C138006503AF /* night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = night.png; sourceTree = "<group>"; };
+		0D09EEC82E288777006503AF /* photo01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo01.jpg; sourceTree = "<group>"; };
+		0D09EECA2E28877A006503AF /* photo02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo02.jpg; sourceTree = "<group>"; };
+		0D09EECC2E28877E006503AF /* photo03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo03.jpg; sourceTree = "<group>"; };
+		0D09EECE2E288782006503AF /* photo04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo04.jpg; sourceTree = "<group>"; };
+		0D09EED02E288785006503AF /* photo05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo05.jpg; sourceTree = "<group>"; };
+		0D09EED22E288788006503AF /* photo06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo06.jpg; sourceTree = "<group>"; };
 		0D336D922DFA8A7F006BF4ED /* 网易云音乐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易云音乐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D336DAD2DFA8A82006BF4ED /* 网易云音乐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网易云音乐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D336DB72DFA8A82006BF4ED /* 网易云音乐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网易云音乐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +275,12 @@
 		0D95659C2DFAF5C300E3962E /* 网易云图片 */ = {
 			isa = PBXGroup;
 			children = (
+				0D09EEC82E288777006503AF /* photo01.jpg */,
+				0D09EECA2E28877A006503AF /* photo02.jpg */,
+				0D09EECC2E28877E006503AF /* photo03.jpg */,
+				0D09EECE2E288782006503AF /* photo04.jpg */,
+				0D09EED22E288788006503AF /* photo06.jpg */,
+				0D09EED02E288785006503AF /* photo05.jpg */,
 				0D39D43A2E265DFB00905F7D /* a1.jpg */,
 				0D39D43B2E265DFB00905F7D /* a2.jpg */,
 				0D39D43C2E265DFB00905F7D /* a3.jpg */,
@@ -458,10 +476,12 @@
 				0D09EE7F2E2779C3006503AF /* b1.png in Resources */,
 				0D95659D2DFAF5C300E3962E /* p4.jpg in Resources */,
 				0D95659E2DFAF5C300E3962E /* p8.jpg in Resources */,
+				0D09EED12E288785006503AF /* photo05.jpg in Resources */,
 				0D95659F2DFAF5C300E3962E /* p6.jpg in Resources */,
 				0D09EE552E27361C006503AF /* Vip6.png in Resources */,
 				0D39D4A82E26804900905F7D /* pic2.jpg in Resources */,
 				0D9571D22E24B1E000E3962E /* back.jpg in Resources */,
+				0D09EEC92E288777006503AF /* photo01.jpg in Resources */,
 				0D9565A02DFAF5C300E3962E /* p5.jpg in Resources */,
 				0D9565A12DFAF5C300E3962E /* p2.jpg in Resources */,
 				0D9565A22DFAF5C300E3962E /* p1.jpg in Resources */,
@@ -469,6 +489,7 @@
 				0D09EE842E2788D8006503AF /* c3.png in Resources */,
 				0D09EE852E2788D8006503AF /* c2.png in Resources */,
 				0D09EE862E2788D8006503AF /* c1.png in Resources */,
+				0D09EECD2E28877E006503AF /* photo03.jpg in Resources */,
 				0D09EE872E2788D8006503AF /* c4.png in Resources */,
 				0D9565A42DFAF5C300E3962E /* p7.jpg in Resources */,
 				0D336E932DFA9502006BF4ED /* leftButtonOfsearch.png in Resources */,
@@ -489,6 +510,7 @@
 				0D9569802E0042CE00E3962E /* search5.png in Resources */,
 				0D956B042E029B1F00E3962E /* pic.jpg in Resources */,
 				0D9573DA2E25302400E3962E /* caidan.png in Resources */,
+				0D09EECF2E288782006503AF /* photo04.jpg in Resources */,
 				0D9569812E0042CE00E3962E /* search6.png in Resources */,
 				0D9569822E0042CE00E3962E /* search8.png in Resources */,
 				0D39D43F2E265DFB00905F7D /* a4.jpg in Resources */,
@@ -497,8 +519,10 @@
 				0D39D4422E265DFB00905F7D /* a3.jpg in Resources */,
 				0D39D4432E265DFB00905F7D /* a5.jpg in Resources */,
 				0D9569832E0042CE00E3962E /* search10.png in Resources */,
+				0D09EED32E288788006503AF /* photo06.jpg in Resources */,
 				0D9566A82DFBFFC600E3962E /* search2.png in Resources */,
 				0D09EE8E2E278D1F006503AF /* m2.png in Resources */,
+				0D09EECB2E28877A006503AF /* photo02.jpg in Resources */,
 				0D09EEC72E27C138006503AF /* night.png in Resources */,
 				0D09EE8F2E278D1F006503AF /* m1.png in Resources */,
 			);

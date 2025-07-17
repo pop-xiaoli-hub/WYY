@@ -14,7 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong)UISegmentedControl* segmentControl;
 @property (nonatomic, copy)NSString* count;
 @property (nonatomic, strong)UIScrollView* scrollView;
-
+@property (nonatomic, copy)void(^CountCellBlock)(void);
+@property (nonatomic, strong)UIImage* image;
+@property (nonatomic, strong)UIImageView* photoView;
+- (void)changeheader:(UIImage* )image ;
 @end
 
 NS_ASSUME_NONNULL_END

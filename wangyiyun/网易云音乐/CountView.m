@@ -9,6 +9,7 @@
 #import "UserBar.h"
 #import "CountTableViewCell.h"
 #import "MenuVC.h"
+#import "DrawVC.h"
 @interface CountView () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong)UITableView* tableView;
 @property (nonatomic, strong)UILabel* nameLabel;
@@ -17,6 +18,7 @@
 @property (nonatomic, strong)UIBarButtonItem* leftbutton;
 @property (nonatomic, strong)UIBarButtonItem* rightbutton;
 @property (nonatomic, assign)BOOL isNight;
+@property (nonatomic, strong)UIImage* header;
 @end
 
 @implementation CountView
@@ -50,6 +52,15 @@
     [self.tableView registerClass:[CountTableViewCell class] forCellReuseIdentifier:@"ViewCell01"];
     [self.tableView registerClass:[CountTableViewCell class] forCellReuseIdentifier:@"ViewCell02"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeBackColor:) name:@"note" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeHeader:) name:@"note2" object:nil];
+}
+
+- (void)changeHeader:(NSNotification* )notification {
+    NSDictionary* dict = notification.userInfo;
+    UIImage* image = dict[@"photo"];
+    self.header = image;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (void)changeBackColor:(NSNotification* )notification {
@@ -96,6 +107,18 @@
     if (indexPath.row == 0) {
         CountTableViewCell* cell01 = [self.tableView dequeueReusableCellWithIdentifier:@"ViewCell01" forIndexPath:indexPath];
         cell01.selectionStyle = UITableViewCellSelectionStyleNone;
+        if (self.header) {
+            [cell01 changeheader:self.header];
+        }
+        cell01.CountCellBlock = ^{
+            DrawVC* vc = [[DrawVC alloc] init];
+            if (self.isNight) {
+                vc.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.9];;
+            } else {
+                vc.view.backgroundColor = [UIColor systemGroupedBackgroundColor];
+            }
+            [self.navigationController pushViewController:vc animated:YES];
+        };
         return cell01;
     } else {
         CountTableViewCell* cell02 = [self.tableView dequeueReusableCellWithIdentifier:@"ViewCell02" forIndexPath:indexPath];

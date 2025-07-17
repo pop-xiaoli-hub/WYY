@@ -6,7 +6,7 @@
 //
 
 #import "CountTableViewCell.h"
-
+#import "DrawVC.h"
 @implementation CountTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -230,21 +230,26 @@
 }
 
 - (void)createHeader {
-    UIImage* image = [UIImage imageNamed:@"pic2.jpg"];
-    UIImageView* imageView = [[UIImageView alloc] initWithImage:image];
-    [self.contentView addSubview:imageView];
-    imageView.clipsToBounds = YES;
-    imageView.contentMode = UIViewContentModeScaleAspectFill;
-    imageView.frame = CGRectMake(0, 130, 100, 100);
-    imageView.center = CGPointMake([[UIScreen mainScreen] bounds].size.width / 2, 55);
-    imageView.layer.masksToBounds = YES;
-    imageView.layer.cornerRadius = 50;
-    imageView.layer.borderWidth = 5;
-    imageView.layer.borderColor = [UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:0.8].CGColor;
+    self.image = [UIImage imageNamed:@"pic2.jpg"];
+    self.photoView = [[UIImageView alloc] initWithImage:self.image];
+    [self.contentView addSubview:self.photoView];
+    self.photoView.clipsToBounds = YES;
+    self.photoView.contentMode = UIViewContentModeScaleAspectFill;
+    self.photoView.frame = CGRectMake(0, 130, 100, 100);
+    self.photoView.center = CGPointMake([[UIScreen mainScreen] bounds].size.width / 2, 55);
+    self.photoView.layer.masksToBounds = YES;
+    self.photoView.layer.cornerRadius = 50;
+    self.photoView.layer.borderWidth = 5;
+    self.photoView.layer.borderColor = [UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:0.8].CGColor;
     self.backgroundColor = [UIColor clearColor];
+    self.photoView.userInteractionEnabled = YES;
+    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pressheader)];
+    tap.numberOfTapsRequired = 1;
+    tap.numberOfTouchesRequired = 1;
+    [self.photoView addGestureRecognizer:tap];
     UILabel* label = [[UILabel alloc] init];
     label.frame = CGRectMake(0, 0, 200, 40);
-    label.center = CGPointMake(imageView.center.x, 140);
+    label.center = CGPointMake(self.photoView.center.x, 140);
     label.text  = @"情深似海无边际";
     label.font = [UIFont systemFontOfSize:22];
     label.textAlignment = NSTextAlignmentCenter;
@@ -254,6 +259,16 @@
     [button setImage:[UIImage imageNamed:@"vip2.png"] forState:UIControlStateNormal];
     button.frame = CGRectMake(170, 5, 40, 40);
     [label addSubview:button];
+}
+
+- (void)changeheader:(UIImage *)image {
+    self.photoView.image = image;
+}
+
+- (void)pressheader {
+    if (self.CountCellBlock) {
+        self.CountCellBlock();
+    }
 }
 
 - (void)pressButton:(UIButton* )button {

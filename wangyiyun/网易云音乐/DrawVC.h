@@ -10,7 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DrawVC : UIViewController
-
+@property (nonatomic, assign)BOOL isnight;
+@property (nonatomic, strong)UIScrollView* scrollView;
 @end
 
 NS_ASSUME_NONNULL_END
