@@ -25,8 +25,10 @@
         NSString* strName = [NSString stringWithFormat:@"photo0%d.jpg", i + 1];
         UIImage* image = [UIImage imageNamed:strName];
         UIImageView* iView = [[UIImageView alloc] initWithImage:image];
-        iView.frame = CGRectMake(15 + (i % 3) * 125, 15 + (i / 3) * 165, 120, 130);
+        iView.frame = CGRectMake(20 + (i % 3) * 125, 15 + (i / 3) * 165, 110, 120);
         iView.backgroundColor = [UIColor clearColor];
+        iView.layer.masksToBounds = YES;
+        iView.layer.cornerRadius = 10;
         [self.scrollView addSubview:iView];
         iView.userInteractionEnabled = YES;
         UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(chooseToChange:)];
@@ -38,6 +40,10 @@
 }
 
 - (void)chooseToChange:(UITapGestureRecognizer*)tap {
+    UIImageView* imageView = (UIImageView*)tap.view;
+    imageView.layer.masksToBounds = YES;
+    imageView.layer.borderWidth = 5;
+    imageView.layer.borderColor = [UIColor yellowColor].CGColor;
     UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"警告" message:@"是否确认更换" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     [alertController addAction:cancleAction];
@@ -46,6 +52,7 @@
         UIImage* image = imageView.image;
         NSDictionary* userInfo = @{@"photo" : image};
         [[NSNotificationCenter defaultCenter] postNotificationName:@"note2" object:nil userInfo:userInfo];
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }];
     [alertController addAction:confirmAction];
     [self presentViewController:alertController animated:YES completion:nil];

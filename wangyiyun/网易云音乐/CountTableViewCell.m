@@ -28,6 +28,7 @@
     self.scrollView.pagingEnabled = YES;
     self.scrollView.scrollEnabled = YES;
     self.scrollView.bounces = NO;
+    self.scrollView.delegate = self;
     [self.contentView addSubview:self.scrollView];
     UIImageView* view1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"a1.jpg"]];
     UIImageView* view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"a2.jpg"]];
@@ -112,6 +113,20 @@
     [self.scrollView addSubview:button3];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat contentx = self.scrollView.contentOffset.x;
+    CGFloat w = scrollView.frame.size.width;
+    CGFloat index = contentx / w;
+    NSInteger select = (NSInteger)(index + 0.5);
+    if (select >= self.segmentControl.numberOfSegments) {
+        select =self.segmentControl.numberOfSegments - 1;
+    }
+    if (self.segmentControl.selectedSegmentIndex != select)
+    {
+        self.segmentControl.selectedSegmentIndex = select;
+    }    //self.segmentControl.selectedSegmentIndex = contentx / [[UIScreen mainScreen] bounds].size.width;
+}
+
 - (void)pressHeart:(UIButton* )button {
     if (button.selected == NO) {
         [button setImage:[UIImage imageNamed:@"aixin2.png"] forState:UIControlStateNormal];
@@ -141,7 +156,19 @@
 
 - (void)segChanged {
     NSInteger selected = self.segmentControl.selectedSegmentIndex;
-    [self.scrollView setContentOffset:CGPointMake(selected * self.scrollView.bounds.size.width, 0) animated:YES];
+    CGFloat offsetx = selected * self.scrollView.bounds.size.width;
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.scrollView.contentOffset = CGPointMake(offsetx, 0);
+    } completion:nil];
+    /*
+     options:决定动画变速：
+     UIViewAnimationOptionCurveEaseInout:慢快慢
+     --EaseIn:慢-快
+     --EaseOut:快-慢
+     --Linnear;匀速
+     
+     animations:动画块：需要变化的动画
+     */
 }
 
 - (void)creatStackView {

@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CountTableViewCell : UITableViewCell
+@interface CountTableViewCell : UITableViewCell<UIScrollViewDelegate>
 @property (nonatomic, strong)UILabel* label;
 @property (nonatomic, strong)UISegmentedControl* segmentControl;
 @property (nonatomic, copy)NSString* count;

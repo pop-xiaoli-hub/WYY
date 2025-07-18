@@ -27,6 +27,9 @@
 		0D09EECF2E288782006503AF /* photo04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EECE2E288782006503AF /* photo04.jpg */; };
 		0D09EED12E288785006503AF /* photo05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EED02E288785006503AF /* photo05.jpg */; };
 		0D09EED32E288788006503AF /* photo06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D09EED22E288788006503AF /* photo06.jpg */; };
+		0D09F2852E2A31BF006503AF /* m3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D09F2842E2A31BF006503AF /* m3.jpg */; };
+		0D09F2862E2A31BF006503AF /* m1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D09F2822E2A31BF006503AF /* m1.jpg */; };
+		0D09F2872E2A31BF006503AF /* m2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D09F2832E2A31BF006503AF /* m2.jpg */; };
 		0D336E932DFA9502006BF4ED /* leftButtonOfsearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D336E912DFA9502006BF4ED /* leftButtonOfsearch.png */; };
 		0D336E952DFA96D2006BF4ED /* rightButtonOfsearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D336E942DFA96D2006BF4ED /* rightButtonOfsearch.png */; };
 		0D39D43F2E265DFB00905F7D /* a4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D39D43D2E265DFB00905F7D /* a4.jpg */; };
@@ -106,6 +109,9 @@
 		0D09EECE2E288782006503AF /* photo04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo04.jpg; sourceTree = "<group>"; };
 		0D09EED02E288785006503AF /* photo05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo05.jpg; sourceTree = "<group>"; };
 		0D09EED22E288788006503AF /* photo06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo06.jpg; sourceTree = "<group>"; };
+		0D09F2822E2A31BF006503AF /* m1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = m1.jpg; sourceTree = "<group>"; };
+		0D09F2832E2A31BF006503AF /* m2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = m2.jpg; sourceTree = "<group>"; };
+		0D09F2842E2A31BF006503AF /* m3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = m3.jpg; sourceTree = "<group>"; };
 		0D336D922DFA8A7F006BF4ED /* 网易云音乐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易云音乐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D336DAD2DFA8A82006BF4ED /* 网易云音乐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网易云音乐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D336DB72DFA8A82006BF4ED /* 网易云音乐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网易云音乐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,6 +302,9 @@
 				0D95659B2DFAF5C300E3962E /* p8.jpg */,
 				0D956B162E02A43400E3962E /* StartView.jpg */,
 				0D39D4A72E26804900905F7D /* pic2.jpg */,
+				0D09F2822E2A31BF006503AF /* m1.jpg */,
+				0D09F2832E2A31BF006503AF /* m2.jpg */,
+				0D09F2842E2A31BF006503AF /* m3.jpg */,
 			);
 			path = "网易云图片";
 			sourceTree = "<group>";
@@ -479,6 +488,9 @@
 				0D09EED12E288785006503AF /* photo05.jpg in Resources */,
 				0D95659F2DFAF5C300E3962E /* p6.jpg in Resources */,
 				0D09EE552E27361C006503AF /* Vip6.png in Resources */,
+				0D09F2852E2A31BF006503AF /* m3.jpg in Resources */,
+				0D09F2862E2A31BF006503AF /* m1.jpg in Resources */,
+				0D09F2872E2A31BF006503AF /* m2.jpg in Resources */,
 				0D39D4A82E26804900905F7D /* pic2.jpg in Resources */,
 				0D9571D22E24B1E000E3962E /* back.jpg in Resources */,
 				0D09EEC92E288777006503AF /* photo01.jpg in Resources */,

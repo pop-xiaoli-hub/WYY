@@ -19,6 +19,7 @@
 @property (nonatomic, strong)UIBarButtonItem* rightButton;
 @property (nonatomic, assign) CGFloat lastOffset;
 @property (nonatomic, assign)BOOL isNight;
+@property (nonatomic, strong)UIImage* image;
 @end
 
 @implementation SearchView
@@ -69,6 +70,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.isNight = NO;
+    
     self.view.backgroundColor = [UIColor systemGroupedBackgroundColor];
 //    CustomNabBar* bar = [[CustomNabBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 105)];
 //    [self.view addSubview:bar];
@@ -92,7 +94,7 @@
     UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dissmissKeyboard)];
     //tap.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tap];
-    
+    self.image = [UIImage imageNamed:@"pic2.jpg"];
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.delegate = self;
@@ -110,6 +112,12 @@
     [self.tableView registerClass:[SearchTableViewCell class] forCellReuseIdentifier:@"cell06"];
     [self.tableView registerClass:[SearchTableViewCell class] forCellReuseIdentifier:@"cell07"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeBackColor:) name:@"note" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeHeader:) name:@"note2" object:nil];
+}
+- (void)changeHeader:(NSNotification* )notification {
+    NSDictionary* dict = notification.userInfo;
+    UIImage* image = dict[@"photo"];
+    self.image = image;
 }
 
 - (void)changeBackColor:(NSNotification* )notification {
@@ -118,9 +126,17 @@
     if ([num intValue]) {
         self.isNight = YES;
         self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
+        UITabBarAppearance* app = [[UITabBarAppearance alloc] init];
+        [app configureWithDefaultBackground];
+        app.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
+        self.tabBarController.tabBar.standardAppearance = app;
     } else {
         self.isNight = NO;
         self.view.backgroundColor = [UIColor systemGroupedBackgroundColor];
+        UITabBarAppearance* app = [[UITabBarAppearance alloc] init];
+        [app configureWithOpaqueBackground];
+        app.backgroundColor = [UIColor whiteColor];
+        self.tabBarController.tabBar.standardAppearance = app;
     }
 }
 
@@ -139,8 +155,10 @@
 
 - (void)pressLeft {
     MoreVC* vc = [[MoreVC alloc] init];
+    vc.isnight = self.isNight;
     vc.modalPresentationStyle = UIModalPresentationCustom;
     vc.transitioningDelegate = self;
+    vc.image = self.image;
     [self presentViewController:vc animated:YES completion:nil];
 }
 
